@@ -1,0 +1,14 @@
+package task_a_b;
+import java.util.Comparator;
+
+/* Task 'a' */
+public class PriceComparator implements Comparator<Product> {
+
+	@Override
+	public int compare(Product o1, Product o2) {
+		if(o1.getPrice() == o2.getPrice()) return 0;
+		else if(o1.getPrice() < o2.getPrice()) return -1;
+		else return 1;
+	}
+
+}
