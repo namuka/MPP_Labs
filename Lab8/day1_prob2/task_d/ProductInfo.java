@@ -10,7 +10,7 @@ public class ProductInfo {
 	static enum SortMethod {BYTITLE, BYPRICE};
 	SortMethod method;
 	
-	public void mySort(List<Product> products, final SortMethod method) {
+	public void mySort(List<Product> products, SortMethod method) {
 		Collections.sort(products, (p1,p2) ->
 		{
 			if(method == SortMethod.BYTITLE) {
