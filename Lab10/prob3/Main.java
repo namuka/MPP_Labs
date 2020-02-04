@@ -33,8 +33,27 @@ public class Main {
 		boolean result = Main.contains1(list, emp1);
 		System.out.println("Employee test result: " + result);		
 	}
+	public static void test3() {
+		List<Account> list = Arrays.asList(
+				new Account("Joe", 120000, 1),
+				new Account("John", 110000, 2),
+		        new Account("Joe", 200000, 3),
+                new Account("Andrew", 80000, 4),
+                new Account("Joe", 760000, 5),
+                new Account("Steven", 135000, 6),
+                new Account("Thomas",111000, 7),
+                new Account("Alice", 100000, 8));
+		Account acc1 = new Account("Joe", 120000, 1);		
+		boolean result = Main.contains1(list, acc1);
+		System.out.println("Account test result: " + result);
+		
+		Account accNew = new Account("Java", 99900, 11);
+		boolean result2 = Main.contains1(list, accNew);
+		System.out.println("\nAccount test result2 (not equal test): " + result2);
+	}
 	public static void main(String[] args) {
 		Main.test1();
 		Main.test2();
+		Main.test3();
 	}
 }
